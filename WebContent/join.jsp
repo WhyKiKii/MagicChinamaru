@@ -2,5 +2,5 @@
     pageEncoding="UTF-8"%>
 
 <jsp:forward page = "template.jsp">
-	<jsp:param name = "CONTENTPAGE" value="loginForm.jsp"/>
+	<jsp:param name = "CONTENTPAGE" value="joinForm.jsp"/>
 </jsp:forward>

@@ -31,7 +31,8 @@ img {
 </style>
 </head>
 <body>
-<img src = "img/images.jpg"/>
-<div class = "login"><a href = "login.jsp">로그인</a>&nbsp;&nbsp;&nbsp;&nbsp;회원가입</div>
+<a href = "ideograph.jsp"><img src = "img/images.jpg"/></a>
+<div class = "login"><a href = "login.jsp">로그인</a>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href = "join.jsp">회원가입</a></div>
 </body>
 </html>
