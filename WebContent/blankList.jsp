@@ -1,3 +1,4 @@
+<%@page import="java.util.Random"%>
 <%@page import="java.io.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -24,6 +25,23 @@ table caption {
 	font-size:20pt;
 	margin-bottom:40pt;
 }
+
+input[type=submit] {
+	font-size:16pt;
+	border:1px solid black;
+	padding:8px;
+	margin-top:30px;
+	background:#ffffff;
+	width:100%;
+	float:right;
+	width:200px;
+}
+
+input[type=submit]:hover {
+	background-color:#D02D2E;
+	color:white;
+	border:0 none;
+}
 </style>
 </head>
 <body>
@@ -35,13 +53,15 @@ table caption {
 	String sLine = "";
 	String ideo[] = new String[21];
 	String mean[] = new String[21];
-	String a[];
 	int i=0;
 	
 	FileReader fr = new FileReader(filePath);
 	BufferedReader br = new BufferedReader(fr);
 	
+	Random rand = new Random();
+	
 	while((sLine = br.readLine()) != null) {
+		String a[];
 		a = sLine.split("/");
 		
 		ideo[i] = a[0];
@@ -66,6 +86,30 @@ table caption {
 		j++;
 	}
 	brr.close();
+	
+	int cnt;
+	
+	if(!num.equals("01")) {
+		cnt = ideo.length;
+	} else {
+		cnt = ideo.length - 1;
+	}
+	
+	for(int k = 0; k < cnt; k++) {
+		int a = rand.nextInt(cnt);
+		int b = rand.nextInt(cnt);
+		
+		if(a != b) {
+			String temp;
+			temp = ideo[a];
+			ideo[a] = ideo[b];
+			ideo[b] = temp;
+			
+			temp = mean[a];
+			mean[a] = mean[b];
+			mean[b] = temp;
+		}
+	}
 %>
 <table>
 	<caption><%= num%>권 - <%= titleLine %></caption>
@@ -80,14 +124,14 @@ table caption {
 		<td><%= ideo[7] %></td>
 	</tr>
 	<tr >
-		<td><%= mean[0] %></td>
-		<td><%= mean[1] %></td>
-		<td><%= mean[2] %></td>
-		<td><%= mean[3] %></td>
-		<td><%= mean[4] %></td>
-		<td><%= mean[5] %></td>
-		<td><%= mean[6] %></td>
-		<td><%= mean[7] %></td>
+		<td><input type = "text" name = "00"></td>
+		<td><input type = "text" name = "01"></td>
+		<td><input type = "text" name = "02"></td>
+		<td><input type = "text" name = "03"></td>
+		<td><input type = "text" name = "04"></td>
+		<td><input type = "text" name = "05"></td>
+		<td><input type = "text" name = "06"></td>
+		<td><input type = "text" name = "07"></td>
 	</tr>
 	<tr class = "ideo"> 
 		<td><%= ideo[8] %></td>
@@ -100,14 +144,14 @@ table caption {
 		<td><%= ideo[15] %></td>
 	</tr>
 	<tr >
-		<td><%= mean[8] %></td>
-		<td><%= mean[9] %></td>
-		<td><%= mean[10] %></td>
-		<td><%= mean[11] %></td>
-		<td><%= mean[12] %></td>
-		<td><%= mean[13] %></td>
-		<td><%= mean[14] %></td>
-		<td><%= mean[15] %></td>
+		<td><input type = "text" name = "08"></td>
+		<td><input type = "text" name = "09"></td>
+		<td><input type = "text" name = "10"></td>
+		<td><input type = "text" name = "11"></td>
+		<td><input type = "text" name = "12"></td>
+		<td><input type = "text" name = "13"></td>
+		<td><input type = "text" name = "14"></td>
+		<td><input type = "text" name = "15"></td>
 	</tr>
 	<tr class = "ideo">
 		<td><%= ideo[16] %></td>
@@ -117,11 +161,14 @@ table caption {
 		<td><% if(ideo[20] != null) { %><%= ideo[20] %> <% } %></td>
 	</tr>
 	<tr>
-		<td><%= mean[16] %></td>
-		<td><%= mean[17] %></td>
-		<td><%= mean[18] %></td>
-		<td><%= mean[19] %></td>
-		<td><% if(mean[20] != null) { %><%= mean[20] %> <% } %></td>
+		<td><input type = "text" name = "16"></td>
+		<td><input type = "text" name = "17"></td>
+		<td><input type = "text" name = "18"></td>
+		<td><input type = "text" name = "19"></td>
+		<td><% if(mean[20] != null) { %><input type = "text" name = "20"> <% } %></td>
+	</tr>
+	<tr>
+		<td colspan = "8"><input type= "submit" value = "제출"></td>
 	</tr>
 </table>
 </body>

@@ -36,11 +36,11 @@ td {
 %>
 	<table>
 		<tr>
-			<td><a href = ideographList.jsp?value=01><img src="img/01.jpg" width="210" height="280"></a></td>
-			<td><a href = ideographList.jsp?value=02><img src="img/02.jpg" width="210" height="280"></a></td>
-			<td><a href = ideographList.jsp?value=03><img src="img/03.jpg" width="210" height="280"></a></td>
-			<td><a href = ideographList.jsp?value=04><img src="img/04.jpg" width="210" height="280"></a></td>
-			<td><a href = ideographList.jsp?value=05><img src="img/05.jpg" width="210" height="280"></a></td>
+			<td><a href = blankList.jsp?value=01><img src="img/01.jpg" width="210" height="280"></a></td>
+			<td><a href = blankList.jsp?value=02><img src="img/02.jpg" width="210" height="280"></a></td>
+			<td><a href = blankList.jsp?value=03><img src="img/03.jpg" width="210" height="280"></a></td>
+			<td><a href = blankList.jsp?value=04><img src="img/04.jpg" width="210" height="280"></a></td>
+			<td><a href = blankList.jsp?value=05><img src="img/05.jpg" width="210" height="280"></a></td>
 		</tr>
 		<tr class = "txt">
 			<td><%= line[0] %></td>
@@ -50,11 +50,11 @@ td {
 			<td><%= line[4] %></td>
 		</tr>
 		<tr>
-			<td><a href = ideographList.jsp?value=06><img src="img/06.jpg" width="210" height="280"></a></td>
-			<td><a href = ideographList.jsp?value=07><img src="img/07.jpg" width="210" height="280"></a></td>
-			<td><a href = ideographList.jsp?value=08><img src="img/08.jpg" width="210" height="280"></a></td>
-			<td><a href = ideographList.jsp?value=09><img src="img/09.jpg" width="210" height="280"></a></td>
-			<td><a href = ideographList.jsp?value=10><img src="img/10.jpg" width="210" height="280"></a></td>
+			<td><a href = blankList.jsp?value=06><img src="img/06.jpg" width="210" height="280"></a></td>
+			<td><a href = blankList.jsp?value=07><img src="img/07.jpg" width="210" height="280"></a></td>
+			<td><a href = blankList.jsp?value=08><img src="img/08.jpg" width="210" height="280"></a></td>
+			<td><a href = blankList.jsp?value=09><img src="img/09.jpg" width="210" height="280"></a></td>
+			<td><a href = blankList.jsp?value=010><img src="img/10.jpg" width="210" height="280"></a></td>
 		</tr>
 		<tr class = "txt">
 			<td><%= line[5] %></td>

@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
 div.whole{
@@ -40,7 +40,7 @@ div.infor {
 	font-size:15pt;
 }
 
-input[type=text] {
+input[type=text], input[type=password] {
 	float:right;
 }
 
@@ -51,7 +51,7 @@ input[type=text] {
 		<div class = "whole">
 			<span>로그인</span><p>
 			<div class= "infor">아이디 <input type = "text" name = "id" size = "18"></div>
-			<div class= "infor">비밀번호 <input type = "text" name = "pw" size = "18"></div>
+			<div class= "infor">비밀번호 <input type = "password" name = "pw" size = "18"></div>
 			<input type = "submit" value = "로그인">
 		</div>
 	</form>

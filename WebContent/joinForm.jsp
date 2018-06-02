@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
 div.whole{
@@ -47,19 +47,25 @@ input[type=text], input[type=password] {
 </style>
 </head>
 <body>
-	<form action="joinProc.jsp" method = "post">
+	<form name = "join" action="joinProc.jsp" method = "post">
 		<div class = "whole">
 			<span>회원가입</span><p>
-			<div class= "infor">이름 <input type = "text" name = "name" size = "25"></div>
-			<div class= "infor">아이디 <input type = "text" name = "id" size = "25"></div>
-			<div class= "infor">비밀번호 <input type = "password" name = "pw" size = "25"></div>
-			<div class= "infor">비밀번호 확인 <input type = "password" size = "25"></div>
-			<input type="submit" value="확인">
+			<div class= "infor">아이디 <input type = "text" name = "id" size = "25" required></div>
+			<div class= "infor">비밀번호 <input type = "password" name = "pw" size = "25" required></div>
+			<div class= "infor">비밀번호 확인 <input type = "password" name = "re_pw" size = "25" required></div>
+			<input type="submit" value="확인" onclick = "return joinOK();">
 		</div>
 	</form>
 	
 	<script>
-		
+		function joinOK() {
+			if (document.join.pw.value != document.join.re_pw.value) {
+	            alert("비밀번호가 일치하지 않습니다");
+	            document.join.pw.value = "";
+	            document.join.re_pw.focus();
+	            location.href = "join.jsp";
+	        }
+		}
 	</script>
 </body>
 </html>
