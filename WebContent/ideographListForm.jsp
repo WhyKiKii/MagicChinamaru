@@ -38,8 +38,8 @@ table caption {
 	String a[];
 	int i=0;
 	
-	FileReader fr = new FileReader(filePath);
-	BufferedReader br = new BufferedReader(fr);
+	File file = new File(filePath);
+	BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF-8"));
 	
 	while((sLine = br.readLine()) != null) {
 		a = sLine.split("/");
@@ -56,8 +56,8 @@ table caption {
 	String titleLine = "";
 	int j = 1;
 	
-	FileReader tr = new FileReader(titlePath);
-	BufferedReader brr = new BufferedReader(tr);
+	File titlefile = new File(titlePath);
+	BufferedReader brr = new BufferedReader(new InputStreamReader(new FileInputStream(titlefile), "UTF-8"));
 	
 	while((titleLine = brr.readLine()) != null) {
 		if(j == Integer.parseInt(num)) {

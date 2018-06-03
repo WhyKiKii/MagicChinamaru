@@ -10,10 +10,20 @@ article {
 	margin:1%;
 	padding:20px;
 }
+
+a {
+	text-decoration:none;
+	color:black;
+	font-size:20px;
+}
+
+a:hover {
+	color:#888888;
+}
 </style>
 </head>
 <body>
-	<a href = "canvas.jsp" target = main>따라그리기</a> | <a href = "blank.jsp" target = main>빈칸 채우기</a> | 한자 수업
+	<a href = "blank.jsp" target = main>빈칸 채우기</a> | <a href = "e-lecture.jsp" target=main>한자 수업</a>
 	
 	<section>
 		<article>

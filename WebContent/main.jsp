@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
- apdls
+ 공부방입니다*^^*
 </body>
 </html>

@@ -37,8 +37,9 @@ img {
 	<div class = "login"><a href = "login.jsp">로그인</a>
 	&nbsp;&nbsp;&nbsp;&nbsp;<a href = "join.jsp">회원가입</a></div>
 <% } else { %>
-	<div class = "login"><a href = "logout.jsp">로그아웃</a>
-	&nbsp;&nbsp;&nbsp;&nbsp;<a href = "study.jsp">나의 공부방</a></div>
+	<div class = "login">
+	<a href = "logout.jsp">로그아웃</a>
+	&nbsp;&nbsp;&nbsp;&nbsp;<a href = "study.jsp"><%= (String)session.getAttribute("id") %>의 공부방</a></div>
 <% } %>
 </body>
 </html>

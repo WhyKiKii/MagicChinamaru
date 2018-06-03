@@ -25,8 +25,8 @@ td {
 	String[] line = new String[10];
 	int i = 0;
 	
-	FileReader fr = new FileReader(filePath);
-	BufferedReader br = new BufferedReader(fr);
+	File file = new File(filePath);
+	BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF-8"));
 	
 	while((sLine = br.readLine()) != null) {
 		line[i] = sLine;
@@ -54,7 +54,7 @@ td {
 			<td><a href = blankList.jsp?value=07><img src="img/07.jpg" width="210" height="280"></a></td>
 			<td><a href = blankList.jsp?value=08><img src="img/08.jpg" width="210" height="280"></a></td>
 			<td><a href = blankList.jsp?value=09><img src="img/09.jpg" width="210" height="280"></a></td>
-			<td><a href = blankList.jsp?value=010><img src="img/10.jpg" width="210" height="280"></a></td>
+			<td><a href = blankList.jsp?value=10><img src="img/10.jpg" width="210" height="280"></a></td>
 		</tr>
 		<tr class = "txt">
 			<td><%= line[5] %></td>
